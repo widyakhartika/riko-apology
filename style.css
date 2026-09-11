@@ -1,0 +1,51 @@
+*{box-sizing:border-box}
+:root{--bg:#10131f;--panel:#1b2030;--panel2:#242a3d;--text:#f6f2f5;--muted:#a8afc2;--pink:#ff7fb0;--blue:#78c9ff;--yellow:#ffe28a;--green:#91e6b3;--red:#ff8b8b;--border:rgba(255,255,255,.12)}
+html,body{margin:0;min-height:100%;font-family:Nunito,system-ui,sans-serif;background:var(--bg);color:var(--text)}
+body{overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.hidden{display:none!important}
+.screen{min-height:100vh;display:grid;place-items:center;padding:24px}
+.boot-screen{background:radial-gradient(circle at 50% 35%,#222942 0,#10131f 50%,#090b12 100%)}
+.boot-box{width:min(680px,100%);padding:34px;border:1px solid var(--border);background:rgba(14,17,28,.92);box-shadow:0 30px 100px #0008;border-radius:24px}
+.tiny,.label{font:500 11px "DM Mono",monospace;letter-spacing:.16em;color:var(--muted)}
+.boot-title{font-size:clamp(50px,10vw,92px);font-weight:900;letter-spacing:-.06em;margin:16px 0}
+.boot-title span{color:var(--pink)}
+.terminal{font:14px/1.9 "DM Mono",monospace;color:#b8f8d0;min-height:145px;white-space:pre-wrap}
+.boot-progress{height:7px;background:#2a3042;border-radius:99px;overflow:hidden;margin:12px 0 24px}
+.boot-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--pink));transition:width .15s}
+.primary-btn,.secondary-btn{border:0;border-radius:12px;padding:12px 17px;font-weight:900;letter-spacing:.02em}
+.primary-btn{background:var(--pink);color:#25111b;box-shadow:0 8px 30px #ff7fb033}
+.secondary-btn{background:transparent;color:var(--text);border:1px solid var(--border)}
+.primary-btn:hover{transform:translateY(-2px)}
+.desktop{min-height:100vh;position:relative;background:linear-gradient(135deg,#111524,#171b2c 55%,#111524);overflow:hidden}
+.desktop-noise{position:absolute;inset:0;opacity:.08;pointer-events:none;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:7px 7px}
+.topbar{height:46px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 22px;font:12px "DM Mono",monospace;color:var(--muted);position:relative;z-index:2;background:#0d101a99;backdrop-filter:blur(10px)}
+.topbar strong{color:var(--pink)}.topbar span{opacity:.6}
+.desktop-content{position:relative;z-index:1;max-width:1120px;margin:auto;padding:48px 28px 100px}
+.welcome{max-width:720px}
+.badge{display:inline-block;font:11px "DM Mono",monospace;color:var(--yellow);border:1px solid #ffe28a44;padding:7px 10px;border-radius:99px}
+.welcome h1{font-size:clamp(50px,9vw,100px);line-height:.9;margin:18px 0 14px;letter-spacing:-.07em}
+.welcome>p{font-size:18px;color:var(--muted);max-width:620px}
+.quest-card{margin-top:28px;padding:20px;border:1px solid var(--border);border-radius:20px;background:linear-gradient(135deg,#ffffff08,#ffffff03);display:flex;justify-content:space-between;gap:20px;align-items:center}
+.quest-card h2{margin:7px 0;font-size:24px}.quest-card p{margin:0;color:var(--muted)}
+.quest-score{font:900 30px "DM Mono",monospace;text-align:right;color:var(--pink);white-space:nowrap}.quest-score small{font-size:10px;color:var(--muted)}
+.icons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:42px}
+.desktop-icon{text-align:left;color:var(--text);background:#ffffff05;border:1px solid var(--border);border-radius:18px;padding:20px;transition:.2s;min-height:145px}
+.desktop-icon:hover{background:#ffffff0b;border-color:#ff7fb055;transform:translateY(-4px)}
+.desktop-icon span{font-size:35px;display:block;margin-bottom:16px}.desktop-icon b{display:block;font:700 14px "DM Mono",monospace}.desktop-icon small{display:block;color:var(--muted);margin-top:5px}
+.window{position:fixed;z-index:10;width:min(560px,calc(100vw - 30px));max-height:calc(100vh - 90px);left:50%;top:50%;transform:translate(-50%,-50%);background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 30px 100px #000b;animation:pop .2s ease}
+.window.wide{width:min(850px,calc(100vw - 30px))}
+@keyframes pop{from{opacity:0;transform:translate(-50%,-48%) scale(.97)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.window-head{height:44px;background:#121624;display:flex;align-items:center;justify-content:space-between;padding:0 15px;font:12px "DM Mono",monospace;border-bottom:1px solid var(--border)}
+.close{background:none;border:0;color:var(--muted);font-size:25px;line-height:1}.close:hover{color:#fff}
+.window-body{padding:22px;overflow:auto;max-height:calc(100vh - 134px)}.window-intro{color:var(--muted)}
+.media-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.media-grid figure{margin:0}.media-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}.media-grid figcaption{font-size:12px;color:var(--muted);padding-top:7px}
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}.video-grid video{width:100%;border-radius:12px;background:#080a10}
+.clue{margin-top:20px;padding:13px 15px;background:#ff7fb00b;border:1px dashed #ff7fb044;border-radius:12px;color:#d9dce7;font-size:13px}.clue b{font:11px "DM Mono",monospace;color:var(--pink)}
+.report p{margin:8px 0}.danger{color:var(--red)}.report hr{border:0;border-top:1px solid var(--border);margin:20px 0}.report h3{font:12px "DM Mono",monospace;color:var(--muted);letter-spacing:.12em}.report label{display:block;margin:8px 0}.stamp{display:inline-block;border:2px solid var(--red);color:var(--red);font:900 12px "DM Mono",monospace;padding:7px;transform:rotate(-3deg);margin-bottom:15px}.verdict{padding:15px;border-radius:12px;background:#ff8b8b10;color:#ffd4d4}
+.player{text-align:center}.cassette{width:110px;height:80px;margin:5px auto 20px;border-radius:12px;background:#30384e;display:grid;place-items:center;font-size:35px;box-shadow:inset 0 0 0 5px #171b28}.player audio{width:100%;margin-top:16px}
+.file-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);font:13px "DM Mono",monospace}.delete-regret{border:1px solid var(--border);background:transparent;color:var(--muted);border-radius:8px;padding:6px 9px;font:11px "DM Mono",monospace}.delete-regret:hover{border-color:var(--red);color:var(--red)}.system-msg{padding:15px;background:#ffe28a0a;color:var(--yellow);border-radius:12px}
+.letter{background:#2b2f3c}.paper{background:#f6eedf;color:#2b2630;border-radius:5px;padding:clamp(22px,5vw,45px);box-shadow:0 12px 35px #0004;max-width:700px;margin:auto;font-family:Nunito,serif}.paper-top{font:10px "DM Mono",monospace;color:#7b7280;letter-spacing:.1em}.paper h1{font-size:clamp(25px,5vw,40px);line-height:1.05;margin:25px 0}.paper p{font-size:16px;line-height:1.8}.signature{margin-top:28px}.editable-note{font-size:11px!important;color:#8c8490;border-top:1px dashed #aaa;padding-top:14px}
+.final-level{text-align:center;padding:50px 25px}.lock{font-size:60px}.final-overlay{position:fixed;z-index:100;inset:0;background:#080a12dd;display:grid;place-items:center;padding:20px;backdrop-filter:blur(12px)}.final-card{width:min(620px,100%);text-align:center;padding:45px 30px;border:1px solid #ff7fb044;background:#171b2b;border-radius:28px;box-shadow:0 30px 100px #000c}.sparkles{color:var(--pink);font-size:25px;letter-spacing:10px}.final-card h1{font-size:clamp(40px,8vw,70px);line-height:.95;letter-spacing:-.05em;margin:18px 0}.final-question{font-size:21px}.final-buttons{display:flex;justify-content:center;gap:12px;margin:28px 0;flex-wrap:wrap}.no-pressure{color:var(--muted);font-size:12px;max-width:430px;margin:auto}.toast{position:fixed;z-index:200;bottom:25px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;background:#252b3c;border:1px solid var(--border);padding:12px 16px;border-radius:12px;font-size:13px;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:720px){.icons{grid-template-columns:1fr 1fr}.desktop-content{padding:30px 16px 80px}.welcome h1{font-size:64px}.quest-card{align-items:flex-start}.media-grid,.video-grid{grid-template-columns:1fr}.window{max-height:calc(100vh - 70px)}.window-body{max-height:calc(100vh - 114px)}}
+@media(max-width:430px){.icons{grid-template-columns:1fr}.topbar{padding:0 12px}.desktop-content{padding-left:13px;padding-right:13px}.welcome h1{font-size:56px}.boot-box{padding:25px}}

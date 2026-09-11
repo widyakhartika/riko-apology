@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>RIKO.EXE — Apology Quest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bootScreen" class="screen boot-screen">
+    <div class="boot-box">
+      <div class="tiny">ICI SYSTEMS // PRIVATE BUILD</div>
+      <div class="boot-title">RIKO<span>.EXE</span></div>
+      <div class="terminal" id="bootTerminal"></div>
+      <div class="boot-progress"><i id="bootBar"></i></div>
+      <button id="startBtn" class="primary-btn hidden">START APOLOGY QUEST →</button>
+    </div>
+  </div>
+
+  <main id="desktop" class="desktop hidden">
+    <div class="desktop-noise"></div>
+    <div class="topbar">
+      <div><strong>RIKO.EXE</strong><span> / PERSONAL SYSTEM</span></div>
+      <div id="clock">00:00</div>
+    </div>
+
+    <section class="desktop-content">
+      <div class="welcome">
+        <div class="badge">⚠ RELATIONSHIP STATUS: NEEDS ATTENTION</div>
+        <h1>Hi, Riko.</h1>
+        <p>I made a tiny operating system because apparently a normal “sorry” wasn't enough.</p>
+        <div class="quest-card">
+          <div>
+            <span class="label">CURRENT QUEST</span>
+            <h2>Make Riko Smile Again</h2>
+            <p>Explore the files. There are a few things I need to tell you.</p>
+          </div>
+          <div class="quest-score"><span id="questCount">0</span>/5<br><small>CLUES</small></div>
+        </div>
+      </div>
+
+      <div class="icons">
+        <button class="desktop-icon" data-window="memories"><span>📁</span><b>OUR_MEMORIES</b><small>2 photos + 5 videos</small></button>
+        <button class="desktop-icon" data-window="incident"><span>🧾</span><b>INCIDENT_REPORT</b><small>classified</small></button>
+        <button class="desktop-icon" data-window="music"><span>🎵</span><b>MUSIC_PLAYER</b><small>now playing</small></button>
+        <button class="desktop-icon" data-window="regrets"><span>🗑️</span><b>THINGS_I_REGRET</b><small>cannot delete</small></button>
+        <button class="desktop-icon" data-window="letter"><span>💌</span><b>IMPORTANT_MESSAGE</b><small>please read</small></button>
+        <button class="desktop-icon" data-window="final"><span>🔐</span><b>FINAL_LEVEL</b><small>locked</small></button>
+      </div>
+    </section>
+
+    <div id="windows"></div>
+
+    <div id="toast" class="toast"></div>
+
+    <div id="finalOverlay" class="final-overlay hidden">
+      <div class="final-card">
+        <div class="sparkles">✦ ✧ ✦</div>
+        <div class="tiny">QUEST COMPLETE</div>
+        <h1>One last question.</h1>
+        <p class="final-question">Can I have another chance to make things right?</p>
+        <div class="final-buttons">
+          <button id="yesBtn" class="primary-btn">YES, ICI. 💗</button>
+          <button id="noBtn" class="secondary-btn">I'M NOT READY</button>
+        </div>
+        <p class="no-pressure">No pressure. You don't owe me an immediate answer. I just wanted you to know how sorry I am.</p>
+      </div>
+    </div>
+  </main>
+
+  <template id="memoriesTemplate">
+    <div class="window wide" data-id="memories">
+      <div class="window-head"><span>📁 OUR_MEMORIES</span><button class="close">×</button></div>
+      <div class="window-body">
+        <p class="window-intro">Evidence that we have also been very cute together.</p>
+        <div class="media-grid">
+          <figure><img src="assets/photos/photo-01.jpg" alt="Memory 1" onerror="this.src='https://placehold.co/800x600/ffd6e7/252238?text=PHOTO+01'"><figcaption>Evidence #01 — “we were actually cute”</figcaption></figure>
+          <figure><img src="assets/photos/photo-02.jpg" alt="Memory 2" onerror="this.src='https://placehold.co/800x600/d8efff/252238?text=PHOTO+02'"><figcaption>Evidence #02 — “unfortunately, I still love you”</figcaption></figure>
+        </div>
+        <div class="video-grid">
+          <video controls preload="metadata" src="assets/videos/video-01.mp4"></video>
+          <video controls preload="metadata" src="assets/videos/video-02.mp4"></video>
+          <video controls preload="metadata" src="assets/videos/video-03.mp4"></video>
+          <video controls preload="metadata" src="assets/videos/video-04.mp4"></video>
+          <video controls preload="metadata" src="assets/videos/video-05.mp4"></video>
+        </div>
+        <div class="clue"><b>CLUE FOUND #1</b><br>Whatever happened, these memories still matter to me.</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="incidentTemplate">
+    <div class="window" data-id="incident">
+      <div class="window-head"><span>🧾 INCIDENT_REPORT.exe</span><button class="close">×</button></div>
+      <div class="window-body report">
+        <div class="stamp">CLASSIFIED</div>
+        <p><b>CASE ID:</b> RIKO-001</p>
+        <p><b>VICTIM:</b> Riko</p>
+        <p><b>SUSPECT:</b> Ici</p>
+        <p><b>STATUS:</b> <span class="danger">GUILTY 😔</span></p>
+        <hr>
+        <h3>CHARGES</h3>
+        <label>☑ Making Riko upset</label>
+        <label>☑ Not handling things as well as I should have</label>
+        <label>☑ Causing unnecessary hurt</label>
+        <label>☑ Being stubborn / careless when I should have listened</label>
+        <label>☑ Still loving Riko an unreasonable amount</label>
+        <hr>
+        <h3>VERDICT</h3>
+        <div class="verdict">GUILTY — with mandatory rehabilitation through better communication, more listening, and actual actions.</div>
+        <div class="clue"><b>CLUE FOUND #2</b><br>I know “sorry” only means something if my actions change too.</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="musicTemplate">
+    <div class="window" data-id="music">
+      <div class="window-head"><span>🎵 MUSIC_PLAYER.exe</span><button class="close">×</button></div>
+      <div class="window-body player">
+        <div class="cassette">♫</div>
+        <h2>On Bended Knee</h2>
+        <p>For the dramatic soundtrack department.</p>
+        <audio id="song" controls src="assets/music/on-bended-knee.mp3"></audio>
+        <div class="clue"><b>CLUE FOUND #3</b><br>Okay, yes. I picked the most dramatic song possible.</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="regretsTemplate">
+    <div class="window" data-id="regrets">
+      <div class="window-head"><span>🗑️ THINGS_I_REGRET</span><button class="close">×</button></div>
+      <div class="window-body">
+        <div class="file-row"><span>wrong_choices.txt</span><button class="delete-regret">DELETE</button></div>
+        <div class="file-row"><span>things_i_should_have_done.txt</span><button class="delete-regret">DELETE</button></div>
+        <div class="file-row"><span>hurting_you.txt</span><button class="delete-regret">DELETE</button></div>
+        <p id="regretMsg" class="system-msg">Some regrets cannot be deleted. They can only be learned from.</p>
+        <div class="clue"><b>CLUE FOUND #4</b><br>I can't undo what happened. I can only be responsible for what I do next.</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="letterTemplate">
+    <div class="window wide" data-id="letter">
+      <div class="window-head"><span>💌 IMPORTANT_MESSAGE.txt</span><button class="close">×</button></div>
+      <div class="window-body letter">
+        <div class="paper">
+          <div class="paper-top">PRIVATE MESSAGE — FOR RIKO ONLY</div>
+          <h1>Okay. No more jokes for a second.</h1>
+          <p>Riko,</p>
+          <p>I know I messed up, and I’m genuinely sorry for hurting you. I don't want to make excuses or explain my way out of it. I know that what matters is how my actions made you feel.</p>
+          <p>I should have listened better, thought more carefully, and handled things differently. You deserved better from me in that moment.</p>
+          <p>I'm not asking you to forget what happened or instantly feel okay. I just want you to know that I understand why you're hurt, and I want to do better—not just say that I will.</p>
+          <p>Thank you for reading all the way here.</p>
+          <p class="signature">I'm really sorry.<br><b>— Ici ♡</b></p>
+          <p class="editable-note">✎ Replace this letter with your own words before sending this website.</p>
+        </div>
+        <div class="clue"><b>CLUE FOUND #5</b><br>This is the part where I stop being funny and actually mean what I say.</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="finalTemplate">
+    <div class="window" data-id="final">
+      <div class="window-head"><span>🔐 FINAL_LEVEL</span><button class="close">×</button></div>
+      <div class="window-body final-level">
+        <div class="lock">🔒</div>
+        <h2>Almost there.</h2>
+        <p>You found all five clues.</p>
+        <p>Before the final level unlocks, please read the message and check the memories.</p>
+        <button id="unlockBtn" class="primary-btn">UNLOCK FINAL LEVEL</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
