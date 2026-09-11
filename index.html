@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#111827">
-  <title>RIKO.EXE — Apology Quest</title>
+  <title>For My Ayankk — RIKO.EXE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -17,57 +17,56 @@
       <div class="boot-title">RIKO<span>.EXE</span></div>
       <div class="terminal" id="bootTerminal"></div>
       <div class="boot-progress"><i id="bootBar"></i></div>
-      <button id="startBtn" class="primary-btn hidden">START APOLOGY QUEST →</button>
+      <button id="startBtn" class="primary-btn hidden">OPEN THIS FOR MY AYANKK →</button>
     </div>
   </div>
 
   <main id="desktop" class="desktop hidden">
     <div class="desktop-noise"></div>
     <div class="topbar">
-      <div><strong>RIKO.EXE</strong><span> / PERSONAL SYSTEM</span></div>
+      <div><strong>RIKO.EXE</strong><span> / A LETTER FROM ICI</span></div>
       <div id="clock">00:00</div>
     </div>
 
     <section class="desktop-content">
       <div class="welcome">
-        <div class="badge">⚠ RELATIONSHIP STATUS: NEEDS ATTENTION</div>
-        <h1>Hi, Riko.</h1>
-        <p>I made a tiny operating system because apparently a normal “sorry” wasn't enough.</p>
+        <div class="badge">♥ PRIVATE MESSAGE: FOR MY DEAREST RIKO</div>
+        <h1>Hi, my ayankk.</h1>
+        <p>I didn't make this because a website can fix everything. I made it because there are things I have been too afraid, too stubborn, or too late to say properly.</p>
         <div class="quest-card">
           <div>
             <span class="label">CURRENT QUEST</span>
-            <h2>Make Riko Smile Again</h2>
-            <p>Explore the files. There are a few things I need to tell you.</p>
+            <h2>Finding the words I should have said sooner</h2>
+            <p>Take your time. Open the files in any order. This is not a test, and you don't owe me a certain ending.</p>
           </div>
-          <div class="quest-score"><span id="questCount">0</span>/5<br><small>CLUES</small></div>
+          <div class="quest-score"><span id="questCount">0</span>/5<br><small>CHAPTERS</small></div>
         </div>
       </div>
 
       <div class="icons">
-        <button class="desktop-icon" data-window="memories"><span>📁</span><b>OUR_MEMORIES</b><small>2 photos + 5 videos</small></button>
-        <button class="desktop-icon" data-window="incident"><span>🧾</span><b>INCIDENT_REPORT</b><small>classified</small></button>
-        <button class="desktop-icon" data-window="music"><span>🎵</span><b>MUSIC_PLAYER</b><small>now playing</small></button>
-        <button class="desktop-icon" data-window="regrets"><span>🗑️</span><b>THINGS_I_REGRET</b><small>cannot delete</small></button>
-        <button class="desktop-icon" data-window="letter"><span>💌</span><b>IMPORTANT_MESSAGE</b><small>please read</small></button>
-        <button class="desktop-icon" data-window="final"><span>🔐</span><b>FINAL_LEVEL</b><small>locked</small></button>
+        <button class="desktop-icon" data-window="memories"><span>📁</span><b>OUR_MEMORIES</b><small>the parts I still treasure</small></button>
+        <button class="desktop-icon" data-window="incident"><span>🧾</span><b>INCIDENT_REPORT</b><small>what I need to own</small></button>
+        <button class="desktop-icon" data-window="music"><span>🎵</span><b>MUSIC_PLAYER</b><small>a song I couldn't explain</small></button>
+        <button class="desktop-icon" data-window="regrets"><span>🗑️</span><b>THINGS_I_REGRET</b><small>things I cannot undo</small></button>
+        <button class="desktop-icon" data-window="letter"><span>💌</span><b>IMPORTANT_MESSAGE</b><small>from my heart</small></button>
+        <button class="desktop-icon" data-window="final"><span>🔐</span><b>FINAL_LEVEL</b><small>no pressure, just honesty</small></button>
       </div>
     </section>
 
     <div id="windows"></div>
-
     <div id="toast" class="toast"></div>
 
     <div id="finalOverlay" class="final-overlay hidden">
       <div class="final-card">
         <div class="sparkles">✦ ✧ ✦</div>
-        <div class="tiny">QUEST COMPLETE</div>
-        <h1>One last question.</h1>
-        <p class="final-question">Can I have another chance to make things right?</p>
+        <div class="tiny">ONE LAST THING</div>
+        <h1>My dearest Riko.</h1>
+        <p class="final-question">I don't know what the future will look like. But if there is still a part of you that believes we are worth trying for, I want to try too — properly this time.</p>
         <div class="final-buttons">
-          <button id="yesBtn" class="primary-btn">YES, ICI. 💗</button>
-          <button id="noBtn" class="secondary-btn">I'M NOT READY</button>
+          <button id="yesBtn" class="primary-btn">I'M WILLING TO TRY AGAIN ♡</button>
+          <button id="noBtn" class="secondary-btn">I NEED MORE TIME</button>
         </div>
-        <p class="no-pressure">No pressure. You don't owe me an immediate answer. I just wanted you to know how sorry I am.</p>
+        <p class="no-pressure">Either answer is okay. You don't owe me forgiveness, reassurance, or an immediate decision. I only wanted to finally be honest with you.</p>
       </div>
     </div>
   </main>
@@ -76,10 +75,10 @@
     <div class="window wide" data-id="memories">
       <div class="window-head"><span>📁 OUR_MEMORIES</span><button class="close">×</button></div>
       <div class="window-body">
-        <p class="window-intro">Evidence that we have also been very cute together.</p>
+        <p class="window-intro">Before there was hurt, there were so many ordinary little moments that became precious without us even noticing.</p>
         <div class="media-grid">
-          <figure><img src="assets/photos/photo-01.jpg" alt="Memory 1" onerror="this.src='https://placehold.co/800x600/ffd6e7/252238?text=PHOTO+01'"><figcaption>Evidence #01 — “we were actually cute”</figcaption></figure>
-          <figure><img src="assets/photos/photo-02.jpg" alt="Memory 2" onerror="this.src='https://placehold.co/800x600/d8efff/252238?text=PHOTO+02'"><figcaption>Evidence #02 — “unfortunately, I still love you”</figcaption></figure>
+          <figure><img src="assets/photos/photo-01.jpg" alt="A memory of us"><figcaption>Memory #01 — A moment I would still choose to keep.</figcaption></figure>
+          <figure><img src="assets/photos/photo-02.jpg" alt="Another memory of us"><figcaption>Memory #02 — Proof that somewhere along the way, you became home to me.</figcaption></figure>
         </div>
         <div class="video-grid">
           <video controls preload="metadata" src="assets/videos/video-01.mp4"></video>
@@ -88,7 +87,7 @@
           <video controls preload="metadata" src="assets/videos/video-04.mp4"></video>
           <video controls preload="metadata" src="assets/videos/video-05.mp4"></video>
         </div>
-        <div class="clue"><b>CLUE FOUND #1</b><br>Whatever happened, these memories still matter to me.</div>
+        <div class="clue"><b>CHAPTER FOUND #1</b><br>I don't want to erase our past just because some parts of it became painful. The good memories were real too. So was the love.</div>
       </div>
     </div>
   </template>
@@ -97,22 +96,22 @@
     <div class="window" data-id="incident">
       <div class="window-head"><span>🧾 INCIDENT_REPORT.exe</span><button class="close">×</button></div>
       <div class="window-body report">
-        <div class="stamp">CLASSIFIED</div>
-        <p><b>CASE ID:</b> RIKO-001</p>
-        <p><b>VICTIM:</b> Riko</p>
-        <p><b>SUSPECT:</b> Ici</p>
-        <p><b>STATUS:</b> <span class="danger">GUILTY 😔</span></p>
+        <div class="stamp">I TAKE RESPONSIBILITY</div>
+        <p><b>CASE ID:</b> US-001</p>
+        <p><b>PERSON I HURT:</b> Riko</p>
+        <p><b>PERSON WHO NEEDS TO DO BETTER:</b> Ici</p>
+        <p><b>STATUS:</b> <span class="danger">GUILTY — WITHOUT EXCUSES</span></p>
         <hr>
-        <h3>CHARGES</h3>
-        <label>☑ Making Riko upset</label>
-        <label>☑ Not handling things as well as I should have</label>
-        <label>☑ Causing unnecessary hurt</label>
-        <label>☑ Being stubborn / careless when I should have listened</label>
-        <label>☑ Still loving Riko an unreasonable amount</label>
+        <h3>WHAT I NEED TO ADMIT</h3>
+        <label>☑ I pushed you away when I was afraid of losing you.</label>
+        <label>☑ I used the word “break up” when what I really needed was to feel heard and reassured.</label>
+        <label>☑ I let silence become a weapon instead of learning how to communicate my hurt.</label>
+        <label>☑ I made you carry the uncertainty that I was struggling with inside myself.</label>
+        <label>☑ I hurt someone I love while trying to protect myself from being hurt.</label>
         <hr>
-        <h3>VERDICT</h3>
-        <div class="verdict">GUILTY — with mandatory rehabilitation through better communication, more listening, and actual actions.</div>
-        <div class="clue"><b>CLUE FOUND #2</b><br>I know “sorry” only means something if my actions change too.</div>
+        <h3>THE PART THAT HURTS ME TO REALIZE</h3>
+        <div class="verdict">Every time I made leaving sound easy, I was asking you to live with the fear that one day I might actually leave. I understand now why that changed something inside you. I am sorry for making the person I love feel unsafe in a relationship that was supposed to feel like home.</div>
+        <div class="clue"><b>CHAPTER FOUND #2</b><br>I know an apology is not proven by how beautifully I write it. It is proven by what I do after you read it.</div>
       </div>
     </div>
   </template>
@@ -123,9 +122,10 @@
       <div class="window-body player">
         <div class="cassette">♫</div>
         <h2>On Bended Knee</h2>
-        <p>For the dramatic soundtrack department.</p>
+        <p>Not because a dramatic song can fix what happened. It can't.</p>
+        <p>But because sometimes music says the things pride cannot. And right now, I have no pride left to protect.</p>
         <audio id="song" controls src="assets/music/on-bended-knee.mp3"></audio>
-        <div class="clue"><b>CLUE FOUND #3</b><br>Okay, yes. I picked the most dramatic song possible.</div>
+        <div class="clue"><b>CHAPTER FOUND #3</b><br>If this song feels dramatic... well, you know me. But the feeling behind it is sincere.</div>
       </div>
     </div>
   </template>
@@ -134,11 +134,12 @@
     <div class="window" data-id="regrets">
       <div class="window-head"><span>🗑️ THINGS_I_REGRET</span><button class="close">×</button></div>
       <div class="window-body">
-        <div class="file-row"><span>wrong_choices.txt</span><button class="delete-regret">DELETE</button></div>
-        <div class="file-row"><span>things_i_should_have_done.txt</span><button class="delete-regret">DELETE</button></div>
-        <div class="file-row"><span>hurting_you.txt</span><button class="delete-regret">DELETE</button></div>
-        <p id="regretMsg" class="system-msg">Some regrets cannot be deleted. They can only be learned from.</p>
-        <div class="clue"><b>CLUE FOUND #4</b><br>I can't undo what happened. I can only be responsible for what I do next.</div>
+        <div class="file-row"><span>pushing_you_away.txt</span><button class="delete-regret">DELETE</button></div>
+        <div class="file-row"><span>saying_break_up_too_easily.txt</span><button class="delete-regret">DELETE</button></div>
+        <div class="file-row"><span>choosing_silence.txt</span><button class="delete-regret">DELETE</button></div>
+        <div class="file-row"><span>making_you_question_us.txt</span><button class="delete-regret">DELETE</button></div>
+        <p id="regretMsg" class="system-msg">ERROR: The past cannot be deleted. It can only be understood, owned, and turned into something better.</p>
+        <div class="clue"><b>CHAPTER FOUND #4</b><br>I cannot promise you that I will never make another mistake. I can promise that I will stop treating leaving as the answer whenever I am afraid.</div>
       </div>
     </div>
   </template>
@@ -148,17 +149,51 @@
       <div class="window-head"><span>💌 IMPORTANT_MESSAGE.txt</span><button class="close">×</button></div>
       <div class="window-body letter">
         <div class="paper">
-          <div class="paper-top">PRIVATE MESSAGE — FOR RIKO ONLY</div>
-          <h1>Okay. No more jokes for a second.</h1>
-          <p>Riko,</p>
-          <p>I know I messed up, and I’m genuinely sorry for hurting you. I don't want to make excuses or explain my way out of it. I know that what matters is how my actions made you feel.</p>
-          <p>I should have listened better, thought more carefully, and handled things differently. You deserved better from me in that moment.</p>
-          <p>I'm not asking you to forget what happened or instantly feel okay. I just want you to know that I understand why you're hurt, and I want to do better—not just say that I will.</p>
-          <p>Thank you for reading all the way here.</p>
-          <p class="signature">I'm really sorry.<br><b>— Ici ♡</b></p>
-          <p class="editable-note">✎ Replace this letter with your own words before sending this website.</p>
+          <div class="paper-top">PRIVATE MESSAGE — FOR MY DEAREST RIKO</div>
+          <h1>My ayankk, my dearest Riko,</h1>
+          <p>I don't know if a website is the right way to say all of this. Maybe it isn't. But I know that there are things I have carried in my heart for too long, and every time I tried to say them, they came out wrong, too late, or not at all.</p>
+
+          <p>First, I am sorry.</p>
+
+          <p>I am sorry for the times I pushed you away when what I really wanted was for you to come closer. I am sorry for the times I became silent instead of telling you what was hurting me. I am sorry for making the word “break up” something that could come out whenever I was overwhelmed, scared, or disappointed.</p>
+
+          <p>I used to think that saying it first would protect me from the pain of being left. I thought that if I prepared myself for the worst, I would somehow be less afraid of it. But I understand now that I was not only protecting myself. I was hurting you. Every time I made leaving sound possible, I made you live with the possibility of losing me too.</p>
+
+          <p>And I am deeply sorry for that.</p>
+
+          <p>There were things I was afraid to say honestly. I was afraid of the distance. Afraid of uncertainty. Afraid of building a future around something I was no longer sure I understood. I was afraid when the things we once talked about so confidently started to feel less certain. I was afraid of loving you deeply while not knowing whether our destination was still the same.</p>
+
+          <p>But being afraid does not make the way I handled it right.</p>
+
+          <p>You deserved to hear what was happening inside my head. You deserved a partner who could say, “I am scared,” instead of making you feel like the relationship itself was the problem. You deserved communication instead of silence, reassurance instead of uncertainty, and honesty instead of words that made you wonder whether I still wanted you.</p>
+
+          <p>I also understand something I didn't understand before: love is not only about how strongly I feel. It is also about how safe, respected, and loved I make the other person feel.</p>
+
+          <p>I cannot undo the moments that hurt you. I cannot ask you to simply forget them. I cannot write a beautiful apology and expect everything inside you to immediately become okay again. And I don't want to do that.</p>
+
+          <p>If you are tired, I understand. If you need time, I understand. If part of you is still angry, I understand that too. You don't owe me an immediate answer just because I finally found the courage to say these things.</p>
+
+          <p>What I want you to know is that I still love you. Not only the version of you from our happiest days, but you as you are now — with everything we have been through, everything that changed, and everything that is still uncertain.</p>
+
+          <p>I don't want us to go back and pretend nothing happened. I don't want to rebuild the exact same relationship that brought us here. If we ever get another chance, I want us to build something healthier than what we had before — something where we can be honest about fear without turning fear into threats, where we can be angry without becoming cruel, where we can need space without making each other feel abandoned, and where choosing each other is something we keep doing through actions, not just words.</p>
+
+          <p>I am not promising perfection. I am promising that I am finally willing to look at my own mistakes without running away from them.</p>
+
+          <p>And if someday you can look at me and believe that I am truly trying, I hope I can show you that this apology was not just something I wrote because I was afraid to lose you. I hope I can show you that I wrote it because I finally understood how much you mean to me — and how much better I need to love you.</p>
+
+          <p>Thank you for every ordinary day, every long conversation, every laugh, every silly moment, every time you stayed, every time you tried, and even every difficult conversation that forced me to see parts of myself I didn't want to see.</p>
+
+          <p>You became a part of my life so quietly that I didn't realize how deeply you had settled into it until the thought of losing you started to hurt this much.</p>
+
+          <p>Whatever happens after this, I don't want the last thing you remember from me to be my anger, my silence, or the words I used when I was scared.</p>
+
+          <p>I want you to remember this instead:</p>
+
+          <p><b>I am sorry. I love you. I understand more now. And I want to do better.</b></p>
+
+          <p class="signature">Always with love,<br><b>Your Ici ♡</b></p>
         </div>
-        <div class="clue"><b>CLUE FOUND #5</b><br>This is the part where I stop being funny and actually mean what I say.</div>
+        <div class="clue"><b>CHAPTER FOUND #5</b><br>No joke here. No trick. Just me, finally saying what I should have said much sooner.</div>
       </div>
     </div>
   </template>
@@ -168,10 +203,10 @@
       <div class="window-head"><span>🔐 FINAL_LEVEL</span><button class="close">×</button></div>
       <div class="window-body final-level">
         <div class="lock">🔒</div>
-        <h2>Almost there.</h2>
-        <p>You found all five clues.</p>
-        <p>Before the final level unlocks, please read the message and check the memories.</p>
-        <button id="unlockBtn" class="primary-btn">UNLOCK FINAL LEVEL</button>
+        <h2>You made it here.</h2>
+        <p>You have seen the memories. The mistakes. The things I regret. The words I was afraid to say.</p>
+        <p>There is nothing left to unlock except one honest question.</p>
+        <button id="unlockBtn" class="primary-btn">OPEN THE LAST MESSAGE</button>
       </div>
     </div>
   </template>

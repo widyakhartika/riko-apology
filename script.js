@@ -1,11 +1,11 @@
 const bootLines = [
-  "Booting personal apology system...",
-  "Loading memories...",
-  "Checking relationship status...",
-  "WARNING: Riko.exe is upset.",
-  "Locating courage...",
-  "Courage found. Barely.",
-  "Preparing apology quest..."
+  "Booting a message I have been afraid to send...",
+  "Loading our memories...",
+  "Reading the things I should have understood sooner...",
+  "WARNING: unresolved feelings detected.",
+  "Searching for courage...",
+  "Courage found. Finally.",
+  "Preparing this for my dearest Riko..."
 ];
 
 const bootTerminal = document.getElementById("bootTerminal");
@@ -38,7 +38,7 @@ boot();
 startBtn.addEventListener("click", () => {
   bootScreen.classList.add("hidden");
   desktop.classList.remove("hidden");
-  showToast("Quest started. Good luck, detective. 🫡");
+  showToast("Take your time, ayankk. This is for you. ♡");
   setTimeout(() => openWindow("memories"), 450);
 });
 
@@ -68,8 +68,8 @@ function openWindow(id) {
       btn.addEventListener("click", () => {
         btn.textContent = "FAILED";
         btn.disabled = true;
-        win.querySelector("#regretMsg").textContent = "ERROR 409: Some regrets cannot be deleted. Learn from them instead.";
-        showToast("ERROR 409 — regret deletion failed 😭");
+        win.querySelector("#regretMsg").textContent = "ERROR 409: The past cannot be deleted. Understand it. Own it. Learn from it.";
+        showToast("ERROR 409 — some things cannot be undone.");
       });
     });
   }
@@ -107,11 +107,11 @@ document.querySelectorAll(".desktop-icon").forEach(btn => {
 document.getElementById("yesBtn").addEventListener("click", () => {
   finalOverlay.innerHTML = `
     <div class="final-card">
-      <div class="sparkles">✦ 💗 ✦</div>
-      <div class="tiny">MISSION STATUS</div>
-      <h1>Thank you.</h1>
-      <p class="final-question">I'll do my best to make this chance count.</p>
-      <p class="no-pressure">And yes, I know the real ending isn't a website. It's what I do after this.</p>
+      <div class="sparkles">✦ ♡ ✦</div>
+      <div class="tiny">MESSAGE RECEIVED</div>
+      <h1>Thank you, ayankk.</h1>
+      <p class="final-question">If you are willing to try again, I will not take that chance lightly.</p>
+      <p class="no-pressure">I know the real proof will never be this website. It will be in the way I communicate, listen, stay, and love you from here.</p>
       <div style="margin-top:25px;font-size:34px">🥹🫶🏻</div>
     </div>`;
   confetti();
@@ -122,9 +122,9 @@ document.getElementById("noBtn").addEventListener("click", () => {
     <div class="final-card">
       <div class="sparkles">✦</div>
       <div class="tiny">MESSAGE RECEIVED</div>
-      <h1>It's okay.</h1>
-      <p class="final-question">Take the time you need.</p>
-      <p class="no-pressure">I'm still sorry, and I still mean everything I said. You don't have to forgive me just because I made a cute website. 😭</p>
+      <h1>Take your time.</h1>
+      <p class="final-question">I will respect the space you need.</p>
+      <p class="no-pressure">You don't have to forgive me because I made a cute website. I meant what I said, and I will leave the rest to time, your heart, and my actions.</p>
     </div>`;
 });
 
